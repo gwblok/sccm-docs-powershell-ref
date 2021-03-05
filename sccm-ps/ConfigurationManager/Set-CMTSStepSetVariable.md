@@ -241,9 +241,11 @@ Set-CMTSStepSetVariable [-IsMasked <Boolean>] [-SetConditionOperatingSystem] [-S
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Updating an existing Variable
 ```
-PS XYZ:\>
+PS XYZ:\>$TSName = "Task Sequence Name"
+PS XYZ:\>$TSSetVarStepName = "New TS Var - Hello"
+PS XYZ:\>Get-CMTaskSequence -Name $TSName | Set-CMTSStepSetVariable -TaskSequenceVariable "Hello" -TaskSequenceVariableValue "TRUE" -StepName $TSSetVarStepName
 ```
 
 ## PARAMETERS
