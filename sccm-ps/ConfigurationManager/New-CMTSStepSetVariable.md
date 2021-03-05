@@ -33,7 +33,8 @@ New-CMTSStepSetVariable [-IsMasked <Boolean>] -TaskSequenceVariable <String>
 
 ### Example 1
 ```
-PS XYZ:\>
+PS XYZ:\>$TSSetVarStepName = "New TS Var - Hello"
+PS XYZ:\>$NewCMStepVar = New-CMTSStepSetVariable -TaskSequenceVariable "Hello" -TaskSequenceVariableValue "TRUE" -Name $TSSetVarStepName -Description "Testing Vars via PowerShell"
 ```
 
 ## PARAMETERS
