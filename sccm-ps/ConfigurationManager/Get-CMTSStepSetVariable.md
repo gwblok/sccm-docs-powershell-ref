@@ -42,8 +42,28 @@ Get-CMTSStepSetVariable [-TaskSequenceName] <String> [-StepName <String>] [-What
 ## EXAMPLES
 
 ### Example 1
+``` POwerShell
+PS XYZ:\>$TSName = "Task Sequence Name"
+PS XYZ:\>$TSSetVarStepName = "New TS Var - Hello"
+PS XYZ:\>Get-CMTSStepSetVariable -TaskSequenceName $TSName -StepName $TSSetVarStepName
 ```
-PS XYZ:\>
+``` Output
+PS PS2:\> Get-CMTSStepSetVariable -TaskSequenceName $TSName -StepName $TSSetVarStepName
+
+
+SmsProviderObjectPath  : SMS_TaskSequence_SetVariableAction
+Condition              : 
+ContinueOnError        : False
+Description            : Testing Vars via PowerShell
+DoNotShowVariableValue : False
+Enabled                : True
+HiddenVariableValue    : 	
+                         
+Name                   : New TS Var - Hello
+SupportedEnvironment   : WinPEandFullOS
+Timeout                : 
+VariableName           : Hello
+VariableValue          : TRUE
 ```
 
 ## PARAMETERS
